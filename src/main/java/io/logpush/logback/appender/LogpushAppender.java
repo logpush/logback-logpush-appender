@@ -63,7 +63,7 @@ public class LogpushAppender extends UnsynchronizedAppenderBase<ILoggingEvent> {
 
         LogpushBody logpushBody = new LogpushBody();
 
-        logpushBody.body = msg;
+        logpushBody.message = msg;
         logpushBody.level = event.getLevel().toString();
 
         RequestBody body = RequestBody.create(CONTENT_TYPE, GSON.toJson(logpushBody, LogpushBody.class));
@@ -103,6 +103,6 @@ public class LogpushAppender extends UnsynchronizedAppenderBase<ILoggingEvent> {
 
     private class LogpushBody {
         private String level;
-        private String body;
+        private String message;
     }
 }
