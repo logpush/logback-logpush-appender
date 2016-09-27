@@ -21,7 +21,7 @@
     </appender>
 
     <appender name="LOGPUSH" class="io.logpush.logback.appender.LogpushAppender">
-        <token>1fae6331-d36b-4274-aa74-26d0045acc78</token> <!-- Required, Your Logpush token -->
+        <token>THIS_IS_LOGPUSH_TOKEN</token> <!-- Required, Your Logpush token -->
         <onlyError>true</onlyError> <!-- Optional, Only show ERROR level log, default value is true -->
         <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
             <pattern>${PATTERN}</pattern>

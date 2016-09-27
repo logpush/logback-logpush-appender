@@ -1,38 +1,25 @@
 package io.logpush;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
+import org.junit.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-/**
- * Unit test for simple LogpushAppender.
- */
-public class LogpushAppenderTest
-    extends TestCase
-{
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public LogpushAppenderTest(String testName )
-    {
-        super( testName );
-    }
+public class LogpushAppenderTest {
+    private static final Logger LOG = LoggerFactory.getLogger(LogpushAppenderTest.class);
 
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite()
-    {
-        return new TestSuite( LogpushAppenderTest.class );
-    }
+    @Test
+    public void testLogpush() {
+        String abc = null;
 
-    /**
-     * Rigourous Test :-)
-     */
-    public void testApp()
-    {
-        assertTrue( true );
+        for (int i = 0; i < 3; i++) {
+            try {
+                if (abc.length() == 0) {
+                    LOG.info("No String");
+                }
+            } catch (Exception e) {
+                LOG.error("Caught Exception: ", e);
+                LOG.info("You can't see me.");
+            }
+        }
     }
 }
