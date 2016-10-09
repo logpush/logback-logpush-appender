@@ -9,7 +9,7 @@
 
     <name>logback-logpush-appender</name>
     <description>Integrate Logpush &amp; Logback</description>
-    <url>https://logpush.herokuapp.com</url>
+    <url>http://logpush.io</url>
 
     <licenses>
         <license>
