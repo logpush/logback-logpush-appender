@@ -104,7 +104,7 @@
         <repository>
             <id>bintray-repo-maven</id>
             <name>kewang-maven</name>
-            <url>https://api.bintray.com/maven/logpush/maven/logback-logpush-appender/;publish=1</url>
+            <url>https://api.bintray.com/maven/kewang/maven/logback-logpush-appender/;publish=1</url>
         </repository>
     </distributionManagement>
 </project>
