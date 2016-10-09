@@ -68,7 +68,7 @@ public class LogpushAppender extends UnsynchronizedAppenderBase<ILoggingEvent> {
 
         RequestBody body = RequestBody.create(CONTENT_TYPE, GSON.toJson(logpushBody, LogpushBody.class));
 
-        Request req = new Request.Builder().url("https://logpush.herokuapp.com/api/v1/logs?app_token=" + token).post(body).build();
+        Request req = new Request.Builder().url("http://logpush.io/api/v1/logs?app_token=" + token).post(body).build();
 
         try {
             client.newCall(req).execute();
